@@ -1,0 +1,234 @@
+.animateHeader {   
+    display: flex;
+    flex-direction: column;
+    box-sizing:border-box;
+    margin-top: 10vw;
+    /* margin-bottom: 21vh; */
+    height: 19vw;
+    min-height: 460px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: var(--textDarkBlue);
+    animation-name: beginningPosition;
+    animation-duration: 2s;
+    margin-left: 10%;
+}
+
+.animateHeader h1 {
+    font-weight: normal;
+}
+
+@keyframes beginningPosition {
+    from{
+        padding-left: 400px;
+        color: var(--backgroundColor);
+    } to {
+        padding-left: 20px;
+        color: var(--textDarkBlue);
+    }
+}
+
+.headerText {
+    margin-block-end: 0;
+    margin-block-start: 7vw;
+    font-size: 80px;
+}
+
+/* .spacer {
+    width: 100%;
+    height: 10vw;
+    min-height: 100px;
+    max-height: 400px;
+} */
+
+.scrollContainer {
+    justify-self:flex-end;
+    width: 100%;
+    height: 5vh;
+}
+
+.centerGoDown {
+    position: relative;
+    margin: auto;
+    background-color: var(--textDarkBlue);
+    width: 2px;
+    height: 0;
+    animation-name: scrollDown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+    }
+    45% {
+        top:0;
+        height: 5vh;
+    }
+    90%{
+        top:5vh;
+        height: 0;
+    }
+    100%{
+
+    }
+}
+
+.aboutMeSpace {
+    padding-top: 9vh;
+    width: 100%;
+    height: 30vw + 3vh;
+}
+
+.meContainer{
+    width: 97.5%;
+    background-color: var(--blue); 
+    min-height: 400px;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3vh;
+    margin-left: 1.25%;
+    transition-duration: 2s;
+}
+
+.meContainer:hover {
+    width: 100%;
+    height: 31vw;
+    margin-left: 0%;
+}
+
+.aboutMe {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.alignTexts {
+    margin-left: 5%;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line{
+    width: 99%;
+    background-color: var(--backgroundColor);
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: .5%;
+}
+
+.image {
+    background-image: url(photos/funnyUltimate.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    min-width: 100px;
+    min-height: 100px;
+    right: 5%;
+    background-color: darkgray;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: large;
+    color: transparent;
+    transition-duration: 1s;
+}
+
+.image:hover {
+    color: white;
+    background-image: url(photos/funnyTennis.gif);
+}
+
+/* .imageText {
+    color: white;
+    animation-name: moveText1;
+    transition-duration: 1s;
+}
+
+.imageText:hover {
+    color: transparent;
+} */
+
+
+
+
+
+.titleHeaders {
+    font-size: 40px;
+    margin-block-end: 0;
+    text-decoration: none;
+    color: var(--textDarkBlue);
+    transition-duration: 1s;
+}
+
+.titleHeaders:hover {
+    color: var(--changeTextColor);
+    font-size: 42px;
+}
+
+.foodSection {
+    width: 100%;
+    height: 55vh;
+}
+
+.fixedImageTransition {
+    width: 100%;
+    height: 60%vw;
+}
+
+.imageTrans {
+    background-image: url(photos/trialImg.png);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    width: 95%;
+    height: 100%;
+    min-height: 60vw;
+    margin-left: 5%;
+}
+
+.foodContainer{
+    width: 97.5%;
+    background-color: var(--blue); 
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding-top: 6.25vh; */
+    margin-left: 1.25%;
+}
+
+.galleryContain {
+    width: 100%;
+    height: 70vw;
+}
+.photoCollection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.galImage {
+    height: 30vw;
+    width: 30vw;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: darkgray;   
+}
