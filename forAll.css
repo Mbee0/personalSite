@@ -1,72 +1,138 @@
-:root {
-    --blue: rgb(219, 229, 228);
-    --textDarkBlue: rgb(69, 78, 78);
-    --backgroundColor: rgb(245, 246, 246);
-    --backgroundColorTrans: rgba(245, 246, 246, .9);
-    --changeTextColor: rgb(57, 57, 172);
-}
-
 p {
+    color: rgb(69, 78, 78);
     font-size: large;
-    color:var(--textDarkBlue);
 }
 
 .page {
-    /* overflow-x: hidden; */
-    background-color: var(--backgroundColor);
-    background-image: url(photos/export.png);
-    background-size: contain;
-    /* background-attachment: fixed; */
-    width: 100vw;
-    min-height: 500px;
-    background-repeat: no-repeat;
+    background-color: rgb(245, 246, 246);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 500px;
+    width: 100vw;
 }
 
 .page::-webkit-scrollbar {
     display: none;
 }
 
-.navigation {  
-    z-index: 1;
-    box-sizing: border-box; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8vh;
-    position: fixed;
-    padding: 10px;
+.navigation {
+    background-color: rgba(245, 246, 246, .9);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--backgroundColorTrans);
+    height: 8vh;
+    left: 0;
     padding-top: 2.5vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 
 div.navigation nav a {
-    font-size: large;
-    padding: 10px;
-    color: var(--textDarkBlue);
-    margin-right: 2.5vh;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    float: right;
-    transition: font-size .5s;
     animation-name: largerText;
     animation-duration: 1s;
-    opacity: 100%;
+    border-radius: 10px;
+    color: rgb(69, 78, 78);
+    float: right;
+    font-size: large;
+    margin-right: 2.5vh;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: font-size .5s;
     transition-duration: 1s;
 }
 
 div.navigation nav a:hover {
-    /* font-size: larger; */
-    color: var(--changeTextColor);
+    color: rgb(57, 57, 172);
 }
 
 @keyframes largerText {
-    from{
+    from {
         font-size: medium;
-    } to {
+    }
+
+    to {
         font-size: large;
     }
+}
+
+.animateHeader {
+    animation-duration: 2s;
+    animation-name: beginningPosition;
+    box-sizing: border-box;
+    color: rgb(69, 78, 78);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 19vw;
+    margin-left: 10%;
+    margin-top: 10vw;
+    min-height: 460px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.animateHeader h1 {
+    font-weight: normal;
+}
+
+@keyframes beginningPosition {
+    from {
+        color: rgb(245, 246, 246);
+        padding-left: 400px;
+    }
+
+    to {
+        color: rgb(69, 78, 78);
+        padding-left: 20px;
+    }
+}
+
+.headerText {
+    font-size: 80px;
+    margin-block-end: 0;
+    margin-block-start: 7vw;
+}
+
+.galleryContain {
+    width: 100%;
+    height: 35vw;
+}
+
+.galleryText {
+    margin-top: 30vh;
+    font-size: xx-large;
+    text-align: center;
+    /* background-color: rgb(219, 229, 228); */
+}
+
+.photoCollection {
+    /* background-color: rgb(219, 229, 228); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.galImage {
+    height: 30vw;
+    width: 30vw;
+    min-height: 100px;
+    min-width: 100px;
+    background-color: rgb(219, 229, 228);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: large;
+    color: rgb(69, 78, 78);
+    font-size: x-large;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
